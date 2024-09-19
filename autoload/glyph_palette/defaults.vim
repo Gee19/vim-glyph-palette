@@ -64,7 +64,7 @@ function! glyph_palette#defaults#highlight() abort
   if exists('g:terminal_ansi_colors')
     call s:highlight(g:terminal_ansi_colors)
   elseif exists('g:terminal_color_0')
-    call s:highlight(map(range(16), { i -> g:terminal_color_{i} }))
+    call s:highlight(map(range(13), { i -> g:terminal_color_{i} }))
   else
     call s:highlight(g:glyph_palette#defaults#colors[&background])
   endif
